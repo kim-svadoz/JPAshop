@@ -13,7 +13,7 @@ public class Delivery {
     @Column(name = "delivery_id")
     private Long id;
 
-    @OneToOne(mappedBy = "delivery") // mappedBy : 연관관계의 거울이다
+    @OneToOne(mappedBy = "delivery", fetch = FetchType.LAZY) // mappedBy : 연관관계의 거울이다
     private Order order;
 
     @Embedded
