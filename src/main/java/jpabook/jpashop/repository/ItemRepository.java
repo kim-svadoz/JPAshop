@@ -17,7 +17,9 @@ public class ItemRepository {
         if (item.getId() == null) {
             em.persist(item);
         } else {
-            em.merge(item);
+            // 여기서 param으로 넘어온 item은 영속성 컨텍스트가 아니고
+            // merge후 반환된 아이가 영속성 컨텍스트이므로 나중에 쓸려면 얘를 활용해야 한다.
+            Item merge = em.merge(item);
         }
     }
 
