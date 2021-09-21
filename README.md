@@ -280,6 +280,6 @@ public OrderService(@Qualifier("mainDiscountPolicy") DiscountPolicy mainDiscount
 2.  2.계층끼리의 의존성을 낮쳐주기 위해서 dto를 저는 계층끼리 통신할때 쓴다고 알고있었고 entity 가 business layer인 서비스 계층을 벗어나면 좋지않다고 알고있었습니다. 그래서 service에서 controller 로 넘겨줄때 항상 entity를 dto로 만들어서 넘겨주는 방식으로 사용했습니다. 하지만 선생님은 service 계층에서는 controller에 값을 넘겨주지 않거나 id 정도만 넘겨주고 controller 에서 다시조회 하던지 해서 그값으로 resposne dto를 만들어주는 방식으로 하셨습니다. 제가 기존에 하던 방식은 잘못된건가요? 
 3.  OrderSimpleApiController 같은경우는 orderSerivce를 전혀 사용하지 않았더라구요 대부분의 조회가 바로 OrderRepository에서 가능한 부분이었지만 이렇게 바로 가능하면 서비스 계층을 안통하고 하는방식이 나은건가요? 혹시 언제는 단순 위임이라도 서비스 계층을 통해 repository를 사용하는게 좋고 언제는 바로 조회하는게 좋은지 궁금합니다. 
 
-https://www.inflearn.com/questions/306
+https://www.inflearn.com/questions/30618
 
 ---
