@@ -417,3 +417,9 @@ private final EntityManager em;
 https://www.inflearn.com/questions/158967
 
 ---
+
+@GeneratedValue의 키생성 전략에 대한 질답
+
+https://www.inflearn.com/questions/23993
+
+---
